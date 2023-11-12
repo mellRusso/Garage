@@ -1,6 +1,6 @@
 public class Garage {
 
-    Vehicle[] garage = new Vehicle[6];
+    Vehicle[] garage = new Vehicle[10];
     int indexGarage;
 
     public void addGarage(Vehicle vehicle) {
@@ -35,5 +35,25 @@ public class Garage {
             }
         }
         return -1;
+    }
+
+    public void changeСolor(Vehicle vehicle, String color) {
+        int indexVehicle = findVehicle(vehicle.getName());
+        if (indexVehicle != -1) {
+            garage[indexVehicle].setColor(color);
+            System.out.println("Цвет " + garage[indexVehicle].getName() + " изменен на: " + vehicle.getColor());
+        } else {
+            System.out.println("Данного транспортного средства нету в гараже");
+        }
+    }
+
+    public void changeSpeed(Vehicle vehicle, int speed) {
+        int indexVehicle = findVehicle(vehicle.getName());
+        if (indexVehicle != -1) {
+            garage[indexVehicle].setSpeed(speed);
+            System.out.println("Cкорость " + garage[indexVehicle].getName() + " изменена на: " + vehicle.getSpeed());
+        } else {
+            System.out.println("Данного транспортного средства нету в гараже");
+        }
     }
 }

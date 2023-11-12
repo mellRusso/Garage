@@ -12,12 +12,29 @@ public class Vehicle {
     Vehicle() {
 
     }
+
+    public void display() {
+        System.out.println("Name: " + name + " Speed: " + speed + " Color: " + color);
+    }
+
     public String getName() {
         return name;
     }
 
     public int getSpeed() {
         return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public void move() {
